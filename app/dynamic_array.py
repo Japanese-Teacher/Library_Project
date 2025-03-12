@@ -1,6 +1,6 @@
 from typing import Any
 
-from main import StaticArray
+from app.main import StaticArray
 
 
 class DynamicArray:
