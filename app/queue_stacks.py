@@ -1,4 +1,4 @@
-from stack import Stack
+from app.stack import Stack
 
 
 class QueueStacks:
