@@ -16,6 +16,11 @@ class DynamicArray:
     def __setitem__(self, key: int, value: Any) -> None:
         self._list[key] = value
 
+    def is_empty(self) -> bool:
+        if not self._size > 0:
+            return True
+        return False
+
     def append(self, value: Any) -> Any:
         if self._size < self._real_size:
             self._list[self._size] = value
