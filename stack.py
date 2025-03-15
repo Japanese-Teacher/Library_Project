@@ -2,9 +2,9 @@ from dynamic_array import DynamicArray
 
 
 class Stack:
-    def __init__(self, size: int):
-        self._size = size
-        self._list = DynamicArray(self._size)
+    def __init__(self):
+        self._size = 1
+        self._list = DynamicArray(1)
 
     def push(self, value):
         self._list.append(value)
