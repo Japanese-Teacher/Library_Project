@@ -3,8 +3,8 @@ from app.dynamic_array import DynamicArray
 
 class Stack:
     def __init__(self):
-        self._size = 1
-        self._list = DynamicArray(1)
+        self._size = 0
+        self._list = DynamicArray(self._size)
 
     def push(self, value):
         self._list.append(value)
