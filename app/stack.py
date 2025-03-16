@@ -1,4 +1,4 @@
-from dynamic_array import DynamicArray
+from app.dynamic_array import DynamicArray
 
 
 class Stack:

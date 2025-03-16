@@ -1,4 +1,4 @@
-from stack import Stack
+from app.stack import Stack
 
 
 class QueueStacks:
@@ -12,4 +12,4 @@ class QueueStacks:
         if self._list_r.is_empty():
             while not self._list_l.is_empty():
                 self._list_r.push(self._list_l.pop())
-        self._list_r.pop()
+        return self._list_r.pop()
