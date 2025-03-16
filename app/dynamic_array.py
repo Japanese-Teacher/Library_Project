@@ -26,8 +26,12 @@ class DynamicArray:
             self._list[self._size] = value
             self._size += 1
         else:
+            self._real_size = int(self._real_size * 1.5 + 10)
+            new_list = StaticArray(self._real_size)
+            for index in range(self._size):
+                new_list[index] = self._list[index]
+            self._list = new_list
             self._list[self._size] = value
-            self._real_size = self._real_size * 1.5
             self._size += 1
 
     def pop(self):
