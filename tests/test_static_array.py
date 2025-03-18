@@ -1,10 +1,9 @@
 import pytest
 
 from app.main import StaticArray
-from typing import Any
 
 
-def test_length() -> Any:
+def test_length() -> None:
     a = StaticArray(4)
     with pytest.raises(IndexError):
         _ = a[4]
