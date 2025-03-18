@@ -16,8 +16,8 @@ def test_size() -> Any:
         last_index = a[3]
 
 
-def test_set_item() -> Any:
+def test_set_item() -> None:
     a = StaticArray(2)
     expected_value = 'value'
     a[1] = expected_value
-    assert a[1] == 'value'
+    assert a[1] == expected_value
