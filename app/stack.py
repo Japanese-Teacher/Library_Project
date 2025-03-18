@@ -13,7 +13,7 @@ class Stack:
         return self._list[self._size - 1]
 
     def pop(self):
-        self._list.pop()
+        return self._list.pop()
 
     def is_empty(self) -> bool:
         return self._list.is_empty()
