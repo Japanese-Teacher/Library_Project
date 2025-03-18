@@ -1,6 +1,7 @@
 import pytest
 
 from app.main import StaticArray
+from typing import Any
 
 
 def test_length():
@@ -15,7 +16,7 @@ def test_size():
         last_index = a[3]
 
 
-def set_item():
+def test_set_item() -> Any:
     a = StaticArray(2)
     a[1] = "value"
     assert a[1] == "value"
