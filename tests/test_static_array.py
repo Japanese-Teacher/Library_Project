@@ -4,13 +4,13 @@ from app.main import StaticArray
 from typing import Any
 
 
-def test_length():
+def test_length() -> Any:
     a = StaticArray(4)
     with pytest.raises(IndexError):
         _ = a[4]
 
 
-def test_size():
+def test_size() -> Any:
     a = StaticArray(3)
     with pytest.raises(IndexError):
         last_index = a[3]
@@ -18,5 +18,6 @@ def test_size():
 
 def test_set_item() -> Any:
     a = StaticArray(2)
-    a[1] = "value"
-    assert a[1] == "value"
+    expected_value = 'value'
+    a[1] = expected_value
+    assert a[1] == 'value'
