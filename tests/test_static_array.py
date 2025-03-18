@@ -10,12 +10,6 @@ def test_length() -> Any:
         _ = a[4]
 
 
-def test_size() -> Any:
-    a = StaticArray(3)
-    with pytest.raises(IndexError):
-        last_index = a[3]
-
-
 def test_set_item() -> None:
     a = StaticArray(2)
     expected_value = 'value'
