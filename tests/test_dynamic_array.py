@@ -13,7 +13,7 @@ def test_append():
     assert a[1] == "value"
 
 
-def set_item():
+def test_set_item():
     a = DynamicArray(2)
     a[0] = "value"
     a[0] = 2
