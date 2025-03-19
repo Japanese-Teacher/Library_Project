@@ -13,3 +13,4 @@ def test_stacks_pop():
     a = QueueStacks()
     a.push(5)
     assert a.pop() == 5
+
