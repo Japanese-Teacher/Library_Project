@@ -1,19 +1,23 @@
+from typing import Any
+
 from app.dynamic_array import DynamicArray
 
 
 class Stack:
     def __init__(self):
-        self._size = 0
-        self._list = DynamicArray(self._size)
+        self._list = DynamicArray(0)
 
-    def push(self, value):
-        self._list.append(value)
+    def push(self, value) -> Any:
+        return self._list.append(value)
 
-    def top(self):
-        return self._list[self._size - 1]
+    def top(self) -> Any:
+        return self._list[self._list.get_size() - 1]
 
-    def pop(self):
-        self._list.pop()
+    def pop(self) -> Any:
+        return self._list.pop()
+
+    def get_size(self) -> Int:
+        return self._list.get_size()
 
     def is_empty(self) -> bool:
         return self._list.is_empty()
