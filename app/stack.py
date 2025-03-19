@@ -15,5 +15,8 @@ class Stack:
     def pop(self):
         return self._list.pop()
 
+    def get_size(self):
+        return self._size
+
     def is_empty(self) -> bool:
         return self._list.is_empty()

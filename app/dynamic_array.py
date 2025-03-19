@@ -16,6 +16,9 @@ class DynamicArray:
     def __setitem__(self, key: int, value: Any) -> None:
         self._list[key] = value
 
+    def get_size(self) -> Any:
+        return self._size
+
     def is_empty(self) -> bool:
         if not self._size > 0:
             return True
