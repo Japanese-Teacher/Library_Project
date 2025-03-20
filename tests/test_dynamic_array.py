@@ -4,7 +4,7 @@ from app.dynamic_array import DynamicArray
 def test_is_empty() -> None:
     a = DynamicArray(4)
     a.append("value")
-    assert a.is_empty() == False
+    assert a.is_empty() is False
 
 
 def test_append() -> None:
