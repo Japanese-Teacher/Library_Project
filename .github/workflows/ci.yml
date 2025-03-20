@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.13'
 
       - name: Install uv
         run: pipx install uv
@@ -44,7 +44,7 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
 
       - name: Run tests
-        run: uv pip install pytest && pytest
+        run: pip install pytest && pytest
 
   lint:
     runs-on: ubuntu-latest
@@ -60,7 +60,7 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
 
       - name: Run Ruff
-        run: uv pip install ruff && ruff check .
+        run: pip install ruff && ruff check .
 
   type-check:
     runs-on: ubuntu-latest
@@ -76,4 +76,4 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
 
       - name: Run mypy
-        run: uv pip install mypy && mypy .
+        run: pip install mypy && mypy .
