@@ -76,4 +76,4 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
 
       - name: Run mypy
-        run: pip install mypy && mypy .
+        run: pip install mypy pytest && mypy .
