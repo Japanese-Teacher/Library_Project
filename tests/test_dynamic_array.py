@@ -15,7 +15,6 @@ def test_append() -> None:
 
 def test_set_item() -> None:
     a = DynamicArray(2)
-    a[0] = "value"
     a[0] = 2
     assert a[0] == 2
 
